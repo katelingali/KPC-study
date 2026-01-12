@@ -114,8 +114,7 @@ KPCWGS$Organism = gsub(".*ornith.*", "Klebsiella oxytoca/Raoultella ornithinolyt
 
 ```{r,include=FALSE}
 #Changing date of collection to date instead of character
-KPCWGS1<- KPCWGS %>% 
-  mutate('Collection Date' = as.Date('Collection Date', format="%m/%d/%Y"))
+KPCWGS$'Collection Date' <- as.Date(KPCWGS$'Collection Date', format="%m/%d/%Y")
 
 ```
 
