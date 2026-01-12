@@ -215,7 +215,7 @@ KPCWGS <- KPCWGS %>%
 ```{r, include=FALSE}
 #Separate collection date into month, day, year
 KPCWGS_SEP <- KPCWGS %>%
-  separate(`Collection Date`, c('Collection.Month', 'Collection.Day', 'Collection.Year'), '/')
+  separate(`Collection Date`, c('Collection.Year', 'Collection.Month', 'Collection.Day'), '-')
 
 KPCWGS_SEP$`Collection.Year` <- as.numeric(KPCWGS_SEP$`Collection.Year`)
 
